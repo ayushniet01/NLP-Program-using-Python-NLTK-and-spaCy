@@ -365,7 +365,7 @@ The practicals also provide hands-on experience with popular NLP libraries such 
 
 ## 👨‍💻 Author
 
-**Ayush Kumar Singh**
+**AYUSH KUMAR SINGH**
 
 GitHub: [ayushniet01](https://github.com/ayushniet01)
 
