@@ -301,9 +301,9 @@ The programs demonstrate how raw text can be processed, transformed, and analyze
 
 ## 👨‍💻 Author
 
-**Amit Pandey**
+**AYUSH KUMAR SINGH**
 
-GitHub: [Amit27181](https://github.com/Amit27181)
+GitHub: [ayushniet01](https://github.com/ayushniet01)
 
 ---
 
