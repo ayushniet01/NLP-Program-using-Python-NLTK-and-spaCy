@@ -1,312 +1,304 @@
-# NLP Unit 1 Programs
-
-A collection of basic **Natural Language Processing (NLP)** practical programs implemented using **Python, NLTK, and spaCy**.
-
-This repository contains six practical programs covering fundamental NLP techniques such as tokenization, stemming, lemmatization, stop-word removal, Part-of-Speech (POS) tagging, parsing, chunking, and Named Entity Recognition (NER).
-
----
-
-## 📚 Programs Included
-
-### 1. Tokenization
-
-**Folder:** `01_Tokenization`
-
-Tokenization is the process of breaking text into smaller units called tokens, such as sentences and words.
-
-**Technologies Used:**
-
-- Python
-- NLTK
-- spaCy
-
-**Concepts Covered:**
-
-- Sentence Tokenization
-- Word Tokenization
-
-**File:**
-
-`tokenization.ipynb`
-
----
-
-### 2. Stemming and Lemmatization
-
-**Folder:** `02_Stemming_Lemmatization`
-
-This program demonstrates two techniques used to obtain the base or root form of words.
-
-**Stemming** removes word endings to obtain a root form. It may sometimes produce a non-dictionary word.
-
-**Lemmatization** converts a word into its meaningful dictionary base form.
-
-**Technologies Used:**
-
-- Python
-- NLTK Porter Stemmer
-- NLTK WordNet Lemmatizer
-
-**Concepts Covered:**
-
-- Porter Stemming
-- WordNet Lemmatization
-
-**File:**
-
-`stemming_lemmatization.ipynb`
-
----
-
-### 3. Stop-word Removal
-
-**Folder:** `03_Stopword_Removal`
-
-Stop words are commonly occurring words that may provide little useful information for certain NLP tasks.
-
-Examples include:
-
-`the`, `is`, `a`, `an`, `and`, `of`
-
-This program removes stop words from a given document using NLTK.
-
-**Technologies Used:**
-
-- Python
-- NLTK
-
-**Concepts Covered:**
-
-- Word Tokenization
-- Stop-word Identification
-- Stop-word Removal
-
-**File:**
-
-`stopword_removal.ipynb`
-
----
-
-### 4. Part-of-Speech (POS) Tagging
-
-**Folder:** `04_POS_Tagging`
-
-Part-of-Speech (POS) tagging assigns a grammatical category to each word in a sentence.
-
-**Examples:**
-
-- Noun
-- Verb
-- Adjective
-- Adverb
-- Preposition
-- Determiner
-
-**Technologies Used:**
-
-- Python
-- NLTK
-
-**Concepts Covered:**
-
-- Word Tokenization
-- POS Tagging
-- Grammatical Categories
-
-**File:**
-
-`pos_tagging.ipynb`
-
----
-
-### 5. Parsing and Chunking
-
-**Folder:** `05_Parsing_Chunking`
-
-This program demonstrates syntactic analysis using regular-expression-based chunking and dependency parsing.
-
-**Concepts Covered:**
-
-- POS Tagging
-- Regular Expression Chunking
-- Noun Phrase Chunking
-- Dependency Parsing
-- Grammatical Relationships
-
-**Technologies Used:**
-
-- Python
-- NLTK
-- spaCy
-
-**File:**
-
-`parsing_chunking.ipynb`
-
----
-
-### 6. Named Entity Recognition (NER)
-
-**Folder:** `06_Named_Entity_Recognition`
-
-Named Entity Recognition (NER) identifies and classifies important named entities from text.
-
-**Examples of Entities:**
-
-- Person
-- Organization
-- Location
-- Date
-- Money
-- Geopolitical Entity
-
-**Technologies Used:**
-
-- Python
-- spaCy
-
-**Concepts Covered:**
-
-- Named Entity Recognition
-- Entity Classification
-- Entity Labels
-
-**File:**
-
-`ner.ipynb`
-
----
-
-## 🛠️ Technologies Used
-
-- Python 3
-- NLTK
-- spaCy
-- Jupyter Notebook
-- Natural Language Processing
-
----
-
-## ⚙️ Installation
-
-Make sure Python is installed on your system.
-
-### Install Required Libraries
-
-```bash
+NLP Practical Programs using Python, NLTK & spaCy
+
+A collection of Natural Language Processing (NLP) practical programs implemented in Python using NLTK and spaCy.
+
+This repository covers fundamental NLP techniques including:
+
+Tokenization
+Stemming
+Lemmatization
+Stop-word removal
+POS tagging
+Parsing
+Chunking
+Named Entity Recognition (NER)
+
+🛠️ Technologies Used
+Python 3
+NLTK (Natural Language Toolkit)
+spaCy
+Jupyter Notebook / VS Code / PyCharm (optional)
+
+⚙️ Installation
+
+1. Clone the repository
+git clone https://github.com/ayushniet01/nlp-practical-programs.git
+cd nlp-practical-programs
+2. Install the required libraries
 pip install nltk spacy
-```
+3. Download NLTK resources
+Run Python and execute:
+import nltk
 
-### Download the spaCy English Language Model
-
-```bash
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('averaged_perceptron_tagger_eng')
+4. Download the spaCy English model
 python -m spacy download en_core_web_sm
-```
 
-### NLTK Resources
+📚 Practical Programs
+1. Tokenization
+Tokenization divides text into smaller units such as words or sentences.
 
-The required NLTK resources are downloaded by the respective notebooks.
+NLTK Example
+from nltk.tokenize import word_tokenize, sent_tokenize
 
-These include:
+text = "Natural Language Processing is interesting. Python makes NLP easier."
 
-- `punkt`
-- `punkt_tab`
-- `stopwords`
-- `averaged_perceptron_tagger_eng`
-- `wordnet`
-- `omw-1.4`
+print("Words:", word_tokenize(text))
+print("Sentences:", sent_tokenize(text))
+spaCy Example
+import spacy
 
----
+nlp = spacy.load("en_core_web_sm")
+doc = nlp("Natural Language Processing is interesting.")
 
-## ▶️ How to Run
+for token in doc:
+    print(token.text)
 
-These programs are implemented as **Jupyter Notebooks (`.ipynb`)**.
+2. Stemming
+Stemming reduces words to their root or stem form by removing prefixes or suffixes.
+from nltk.stem import PorterStemmer
 
-You can run them using:
+stemmer = PorterStemmer()
 
-- Jupyter Notebook
-- JupyterLab
-- Google Colab
-- VS Code with the Jupyter extension
+words = ["playing", "played", "plays", "studies", "running"]
 
-### Start Jupyter Notebook
+for word in words:
+    print(word, "->", stemmer.stem(word))
+Note: Stemming may produce a form that is not a valid dictionary word.
 
-```bash
+3. Lemmatization
+Lemmatization converts a word into its meaningful dictionary or base form.
+
+NLTK Example
+from nltk.stem import WordNetLemmatizer
+
+lemmatizer = WordNetLemmatizer()
+
+words = ["running", "studies", "cars", "better"]
+
+for word in words:
+    print(word, "->", lemmatizer.lemmatize(word))
+spaCy Example
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+doc = nlp("The students are studying NLP.")
+
+for token in doc:
+    print(token.text, "->", token.lemma_)
+
+4. Stop-word Removal
+Stop words are commonly occurring words such as the, is, a, an, and and, which are often removed during NLP preprocessing.
+
+NLTK Example
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+text = "This is an example of natural language processing."
+
+stop_words = set(stopwords.words("english"))
+words = word_tokenize(text)
+
+filtered_words = [
+    word for word in words
+    if word.lower() not in stop_words
+]
+
+print(filtered_words)
+spaCy Example
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+doc = nlp("This is an example of natural language processing.")
+
+filtered_words = [
+    token.text for token in doc
+    if not token.is_stop
+]
+
+print(filtered_words)
+
+5. POS Tagging
+Part-of-Speech (POS) tagging assigns grammatical labels such as noun, verb, adjective, and adverb to words.
+import nltk
+from nltk.tokenize import word_tokenize
+
+text = "The quick brown fox jumps over the lazy dog."
+
+words = word_tokenize(text)
+pos_tags = nltk.pos_tag(words)
+
+for word, tag in pos_tags:
+    print(word, "->", tag)
+
+Common POS Tags
+Tag
+Meaning
+NN
+Noun
+NNS
+Plural noun
+VB
+Verb
+VBD
+Past-tense verb
+JJ
+Adjective
+RB
+Adverb
+PRP
+Personal pronoun
+DT
+Determiner
+IN
+Preposition
+
+6. Parsing
+Parsing analyzes the grammatical structure of a sentence and represents relationships between words.
+NLTK Example
+import nltk
+
+grammar = nltk.CFG.fromstring("""
+S -> NP VP
+NP -> DT NN
+VP -> VBZ NP
+DT -> 'the' | 'a'
+NN -> 'boy' | 'ball'
+VBZ -> 'plays'
+""")
+
+parser = nltk.ChartParser(grammar)
+
+sentence = "the boy plays a ball".split()
+
+for tree in parser.parse(sentence):
+    tree.pretty_print()
+
+7. Chunking
+Chunking groups words into meaningful phrases such as noun phrases (NP) and verb phrases (VP).
+import nltk
+
+sentence = [
+    ("The", "DT"),
+    ("quick", "JJ"),
+    ("brown", "JJ"),
+    ("fox", "NN"),
+    ("jumps", "VBZ")
+]
+
+grammar = "NP: {<DT>?<JJ>*<NN>}"
+
+chunk_parser = nltk.RegexpParser(grammar)
+tree = chunk_parser.parse(sentence)
+
+tree.pretty_print()
+
+8. Named Entity Recognition (NER)
+Named Entity Recognition identifies entities such as:
+Person names
+Organizations
+Locations
+Dates
+Money
+Companies
+spaCy Example
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+
+text = "Elon Musk founded SpaceX in the United States."
+
+doc = nlp(text)
+
+for ent in doc.ents:
+    print(ent.text, "->", ent.label_)
+
+📁 Suggested Project Structure
+NLP-Practical-Programs/
+│
+├── README.md
+├── requirements.txt
+│
+├── 01_tokenization.py
+├── 02_stemming.py
+├── 03_lemmatization.py
+├── 04_stopword_removal.py
+├── 05_pos_tagging.py
+├── 06_parsing.py
+├── 07_chunking.py
+└── 08_ner.py
+Alternatively, if each practical is in its own folder:
+NLP-Practical-Programs/
+│
+├── README.md
+├── Tokenization/
+├── Stemming/
+├── Lemmatization/
+├── Stopword-Removal/
+├── POS-Tagging/
+├── Parsing/
+├── Chunking/
+└── NER/
+▶️ How to Run
+For a Python program:
+python 01_tokenization.py
+Replace the filename with the practical you want to execute.
+For Jupyter Notebook:
 jupyter notebook
-```
+Then open the required .ipynb file.
 
-Then open the required notebook and execute the cells sequentially.
+🎯 Learning Objectives
+After completing these practicals, you should be able to:
+Understand basic NLP preprocessing.
+Split text into words and sentences.
+Apply stemming and lemmatization.
+Remove stop words.
+Perform Part-of-Speech tagging.
+Understand basic syntactic parsing.
+Extract phrases using chunking.
+Identify named entities from text.
+Work with both NLTK and spaCy.
 
-For example:
+🔄 NLP Pipeline
+A typical NLP workflow can be represented as:
+Raw Text
+   ↓
+Tokenization
+   ↓
+Stop-word Removal
+   ↓
+Stemming / Lemmatization
+   ↓
+POS Tagging
+   ↓
+Parsing / Chunking
+   ↓
+Named Entity Recognition
+   ↓
+Processed Text / Information
 
-```text
-01_Tokenization/tokenization.ipynb
-```
+📦 requirements.txt
+Create a requirements.txt file containing:
+nltk
+spacy
+Install all dependencies using:
+pip install -r requirements.txt
+Then install the spaCy English model:
+python -m spacy download en_core_web_sm
+👨‍💻 Author
+AYUSH KUMAR SINGH 
+GitHub: https://github.com/ayushniet01 
 
-Similarly, open the notebooks for the other NLP practicals.
+Replace the author details and links with your own information before publishing.
 
----
+⭐ Support
+If you find this repository useful for learning NLP, consider giving it a star ⭐ on GitHub.
 
-## 📂 Repository Structure
-
-```text
-NLP-Unit-1-Programs/
-│
-├── 01_Tokenization/
-│   └── tokenization.ipynb
-│
-├── 02_Stemming_Lemmatization/
-│   └── stemming_lemmatization.ipynb
-│
-├── 03_Stopword_Removal/
-│   └── stopword_removal.ipynb
-│
-├── 04_POS_Tagging/
-│   └── pos_tagging.ipynb
-│
-├── 05_Parsing_Chunking/
-│   └── parsing_chunking.ipynb
-│
-├── 06_Named_Entity_Recognition/
-│   └── ner.ipynb
-│
-└── README.md
-```
-
----
-
-## 🎯 Learning Objectives
-
-Through these programs, the following fundamental NLP concepts are demonstrated:
-
-1. Sentence Tokenization
-2. Word Tokenization
-3. Stemming
-4. Lemmatization
-5. Stop-word Removal
-6. Part-of-Speech (POS) Tagging
-7. Parsing
-8. Chunking
-9. Named Entity Recognition (NER)
-
----
-
-## 🎓 Course Outcome
-
-These practical programs provide hands-on understanding of fundamental Natural Language Processing techniques and their implementation using popular Python NLP libraries.
-
-The programs demonstrate how raw text can be processed, transformed, and analyzed using different NLP techniques.
-
----
-
-## 👨‍💻 Author
-
-**AYUSH KUMAR SINGH**
-
-GitHub: [ayushniet01](https://github.com/ayushniet01)
-
----
-
-## 📌 Note
-
-This repository is created for academic and practical learning purposes and demonstrates basic NLP concepts using Python, NLTK, and spaCy.
+📄 License
+This project is intended for educational and practical learning purposes and can be used for coursework and personal learning.
