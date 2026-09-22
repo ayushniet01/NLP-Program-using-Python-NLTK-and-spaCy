@@ -301,9 +301,9 @@ The programs demonstrate how raw text can be processed, transformed, and analyze
 
 ## 👨‍💻 Author
 
-**Alok Yadav**
+**Ayush Kumar Singh**
 
-GitHub: [AlokYadav1251](https://github.com/AlokYadav1251)
+GitHub: [ayushniet01](https://github.com/ayushniet01)
 
 ---
 
