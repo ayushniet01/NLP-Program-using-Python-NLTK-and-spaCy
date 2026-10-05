@@ -159,7 +159,7 @@ NLP-Notebooks/
 
 🚀 Getting Started
 1. Clone the Repository
-git clone https://github.com/your-username/nlp-notebooks.git
+git clone https://github.com/ayushniet01/nlp-notebooks.git
 cd nlp-notebooks
 
 2. Create a Virtual Environment
