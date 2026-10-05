@@ -1,212 +1,143 @@
 📚 NLP Notebooks Repository
 
-Welcome to the NLP Notebooks Repository — a curated collection of hands-on Jupyter Notebooks covering fundamental and practical concepts in Natural Language Processing (NLP).
+A practical collection of Natural Language Processing (NLP) Jupyter Notebooks covering text representation, word embeddings, similarity, classification, sentiment analysis, topic modeling, information extraction, and information retrieval.
 
-This repository is designed as a learning resource for understanding how textual data can be transformed, represented, analyzed, classified, and searched using classical NLP techniques and machine learning approaches.
+This repository is designed for students, beginners, and developers who want to learn NLP concepts through hands-on Python implementations.
 
-From Bag-of-Words and TF-IDF to Word2Vec, GloVe, sentiment analysis, topic modeling, information extraction, and information retrieval, these notebooks provide practical implementations of important NLP concepts.
+🚀 What's Inside?
 
-🎯 What You'll Learn
+This repository covers the complete journey from basic text representation to practical NLP applications:
 
-By working through these notebooks, you will learn how to:
+🔤 Bag of Words (BoW)
 
-Convert text into numerical representations
+📊 TF-IDF
 
-Build Bag-of-Words and TF-IDF representations
+🔢 N-Grams
 
-Generate unigrams, bigrams, and trigrams
+🧠 Word2Vec
 
-Work with Word2Vec and GloVe embeddings
+🌐 GloVe Embeddings
 
-Calculate similarity between text documents
+📐 Cosine Similarity
 
-Perform text classification
+🚚 Word Mover's Distance (WMD)
 
-Analyze sentiment using lexicon-based approaches
+🤖 Text Classification
 
-Discover hidden topics in documents
+😊 Sentiment Analysis
 
-Extract useful information from structured and unstructured text
+🧩 Topic Modeling
 
-Build a basic information retrieval and document-ranking system
+🔍 Information Extraction
 
-📖 Index of Notebooks
+🔎 Information Retrieval
+
+📈 Document Ranking
+
+📚 Notebook Index
 1. 🔢 Vectorization & Word Representations
-Notebook	Description
-08_Bag_of_Words_(BoW)_Vectorization_and_Representation.ipynb	Learn the fundamentals of Bag-of-Words text representation and vocabulary building.
-09_TF_IDF_Implementation_and_Comparison_with_BoW.ipynb	Implement TF-IDF vectorization and compare it with Bag-of-Words representations.
-10_N_Gram_Model_(Uni_,_Bi_,_Tri_gram)_Generation_from_Corpus.ipynb	Generate word-level unigrams, bigrams, and trigrams from a text corpus.
-12_Word2Vec_Word_Embeddings_using_Gensim_on_a_Custom_Corpus.ipynb	Train Word2Vec word embeddings using Gensim on a custom corpus.
-13_GloVe_Embeddings_Loading_and_Vector_Representation.ipynb	Load pre-trained GloVe embeddings and perform vector-based operations.
-2. 📐 Document Similarity & Clustering
-Notebook	Description
-11_Cosine_Similarity_Computation_between_Text_Documents.ipynb	Compute cosine similarity between document vectors and understand text similarity.
-14_Text_Similarity_using_Word_Mover's_Distance_(WMD).ipynb	Measure semantic similarity between documents using Word Mover's Distance and word embeddings.
+08_Bag_of_Words_(BoW)_Vectorization_and_Representation.ipynb
+
+Learn the fundamentals of Bag-of-Words (BoW) representation and understand how text can be converted into numerical vectors.
+
+09_TF_IDF_Implementation_and_Comparison_with_BoW.ipynb
+
+Implement TF-IDF (Term Frequency-Inverse Document Frequency) and compare it with the Bag-of-Words approach.
+
+10_N_Gram_Model_(Uni_,_Bi_,_Tri_gram)_Generation_from_Corpus.ipynb
+
+Generate different types of N-Grams from a text corpus:
+
+Unigrams
+
+Bigrams
+
+Trigrams
+
+12_Word2Vec_Word_Embeddings_using_Gensim_on_a_Custom_Corpus.ipynb
+
+Train Word2Vec word embeddings using Gensim on a custom text corpus and explore semantic relationships between words.
+
+13_GloVe_Embeddings_Loading_and_Vector_Representation.ipynb
+
+Learn how to load and work with pre-trained GloVe embeddings and represent words as dense vectors.
+
+2. 📐 Document Similarity
+11_Cosine_Similarity_Computation_between_Text_Documents.ipynb
+
+Understand and implement Cosine Similarity to measure the similarity between text documents.
+
+14_Text_Similarity_using_Word_Mover's_Distance_(WMD).ipynb
+
+Explore Word Mover's Distance (WMD) for measuring semantic similarity between documents using word embeddings.
+
 3. 🤖 Classification & Sentiment Analysis
-Notebook	Description
-15_Text_Classification_using_Naïve_Bayes_SVM_with_TF_IDF.ipynb	Build text classification models using Naive Bayes and Support Vector Machines with TF-IDF features.
-16_Sentiment_Analysis_using_TextBlob_and_VADER.ipynb	Perform sentiment analysis using TextBlob and VADER.
-4. 🧠 Topic Modeling & Information Extraction
-Notebook	Description
-17_Topic_Modeling_using_Latent_Dirichlet_Allocation_(LDA).ipynb	Discover hidden topics in a collection of documents using Latent Dirichlet Allocation.
-18_Topic_Modeling_using_Latent_Semantic_Analysis_(LSA).ipynb	Perform topic extraction using Latent Semantic Analysis and Singular Value Decomposition.
-20_Information_Extraction_(IE)_from_Structured_Unstructured_Documents.ipynb	Extract useful entities, relationships, and metadata from structured and unstructured documents.
-5. 🔎 Information Retrieval & Search
-Notebook	Description
-21_Information_Retrieval_System_with_Ranking_using_TF_IDF.ipynb	Build an information retrieval system that ranks documents based on query relevance using TF-IDF and vector similarity.
-🛠️ Technologies & Libraries
+15_Text_Classification_using_Naïve_Bayes_SVM_with_TF_IDF.ipynb
 
-The notebooks make use of several popular Python libraries and NLP tools, including:
-
-Python
-
-Jupyter Notebook
-
-NumPy
-
-Pandas
-
-Scikit-learn
-
-NLTK
-
-Gensim
-
-TextBlob
-
-VADER
-
-Matplotlib
-
-SciPy
-
-🚀 Getting Started
-1. Clone the Repository
-git clone https://github.com/your-username/nlp-notebooks.git
-cd nlp-notebooks
-
-2. Create a Virtual Environment
-python -m venv venv
-
-
-Activate the environment:
-
-Windows:
-
-venv\Scripts\activate
-
-
-macOS/Linux:
-
-source venv/bin/activate
-
-3. Install Dependencies
-pip install numpy pandas scikit-learn nltk gensim textblob vaderSentiment matplotlib scipy jupyter
-
-4. Launch Jupyter Notebook
-jupyter notebook
-
-
-Open the notebook you want to explore and run the cells sequentially.
-
-🗺️ Recommended Learning Path
-
-If you are new to NLP, the notebooks can be studied in the following order:
-
-Text Preprocessing
-       ↓
-Bag-of-Words
-       ↓
-TF-IDF
-       ↓
-N-Grams
-       ↓
-Cosine Similarity
-       ↓
-Word Embeddings
-   ↙         ↘
-Word2Vec    GloVe
-       ↓
-Text Classification
-       ↓
-Sentiment Analysis
-       ↓
-Topic Modeling
-   ↙         ↘
-  LDA        LSA
-       ↓
-Information Extraction
-       ↓
-Information Retrieval
-
-
-This progression moves from basic text representation toward more advanced NLP applications.
-
-💡 Key NLP Concepts Covered
-Text Representation
-
-Learn how raw text can be converted into numerical vectors that machine learning algorithms can process.
-
-Techniques covered:
-
-Bag-of-Words
-
-TF-IDF
-
-N-Grams
-
-Word Embeddings
-
-Semantic Similarity
-
-Explore different ways of determining how similar two pieces of text are.
-
-Methods covered:
-
-Cosine Similarity
-
-Word Mover's Distance
-
-Word Embeddings
-
-Text Classification
-
-Learn how machine learning models can categorize text into predefined classes.
-
-Models covered:
+Build text classification models using:
 
 Naive Bayes
 
-Support Vector Machines
+Support Vector Machine (SVM)
 
-TF-IDF-based classification
+TF-IDF features
 
-Sentiment Analysis
+16_Sentiment_Analysis_using_TextBlob_and_VADER.ipynb
 
-Understand how NLP systems can determine the sentiment expressed in text.
-
-Tools covered:
+Perform sentiment analysis using popular lexicon-based NLP tools:
 
 TextBlob
 
 VADER
 
-Topic Modeling
+Analyze whether text expresses positive, negative, or neutral sentiment.
 
-Discover hidden themes and topics within collections of documents.
+4. 🧠 Topic Modeling & Information Extraction
+17_Topic_Modeling_using_Latent_Dirichlet_Allocation_(LDA).ipynb
 
-Methods covered:
+Discover hidden topics within documents using Latent Dirichlet Allocation (LDA).
 
-Latent Dirichlet Allocation (LDA)
+18_Topic_Modeling_using_Latent_Semantic_Analysis_(LSA).ipynb
 
-Latent Semantic Analysis (LSA)
+Perform topic modeling using Latent Semantic Analysis (LSA) and Singular Value Decomposition (SVD).
 
-Singular Value Decomposition (SVD)
+20_Information_Extraction_(IE)_from_Structured_Unstructured_Documents.ipynb
 
-Information Retrieval
+Learn how to extract useful information such as entities, relationships, and metadata from structured and unstructured documents.
 
-Build a basic search system capable of matching user queries against documents and ranking results according to relevance.
+5. 🔎 Information Retrieval & Search
+21_Information_Retrieval_System_with_Ranking_using_TF_IDF.ipynb
 
+Build a basic Information Retrieval (IR) system that:
+
+Accepts user queries
+
+Compares queries with documents
+
+Calculates relevance scores
+
+Ranks documents
+
+Returns the most relevant results
+
+The system uses TF-IDF and vector similarity for document ranking.
+
+🛠️ Technologies Used
+
+The notebooks are primarily implemented using Python and popular NLP/Data Science libraries.
+
+Technology	Purpose
+🐍 Python	Programming Language
+📓 Jupyter Notebook	Interactive Development
+🔢 NumPy	Numerical Computing
+🐼 Pandas	Data Manipulation
+🤖 Scikit-learn	Machine Learning
+📝 NLTK	Natural Language Processing
+🧠 Gensim	Word Embeddings & Topic Modeling
+💬 TextBlob	Sentiment Analysis
+😊 VADER	Sentiment Analysis
+📊 Matplotlib	Data Visualization
+🔬 SciPy	Scientific Computing
 📂 Repository Structure
 NLP-Notebooks/
 │
@@ -226,82 +157,210 @@ NLP-Notebooks/
 │
 └── README.md
 
-👨‍💻 Who Is This Repository For?
+🚀 Getting Started
+1. Clone the Repository
+git clone https://github.com/your-username/nlp-notebooks.git
+cd nlp-notebooks
 
-This repository is useful for:
+2. Create a Virtual Environment
+python -m venv venv
 
-Students learning Natural Language Processing
 
-Beginners exploring NLP with Python
+Activate it:
 
-Machine Learning and Data Science learners
+Windows
 
-Developers building NLP applications
+venv\Scripts\activate
 
-Anyone looking for practical NLP implementations
 
-Students preparing NLP concepts for interviews and projects
+Linux / macOS
 
-⭐ Topics at a Glance
-Area	Techniques
-Text Representation	BoW, TF-IDF, N-Grams
-Word Embeddings	Word2Vec, GloVe
-Similarity	Cosine Similarity, WMD
-Classification	Naive Bayes, SVM
-Sentiment	TextBlob, VADER
-Topic Modeling	LDA, LSA, SVD
-Information Extraction	Entity & Metadata Extraction
-Information Retrieval	TF-IDF, Document Ranking
-📌 Future Additions
+source venv/bin/activate
 
-Potential topics that can be added to expand this repository:
+3. Install Required Libraries
+pip install numpy pandas scikit-learn nltk gensim textblob vaderSentiment matplotlib scipy jupyter
 
-Text preprocessing pipelines
+4. Start Jupyter Notebook
+jupyter notebook
+
+
+Then open any notebook and run the cells.
+
+🗺️ Recommended Learning Path
+
+If you are new to NLP, follow this order:
+
+Text Representation
+        ↓
+Bag of Words
+        ↓
+TF-IDF
+        ↓
+N-Grams
+        ↓
+Cosine Similarity
+        ↓
+Word Embeddings
+     ↙       ↘
+ Word2Vec   GloVe
+     ↓
+Text Classification
+     ↓
+Sentiment Analysis
+     ↓
+Topic Modeling
+   ↙       ↘
+ LDA       LSA
+     ↓
+Information Extraction
+     ↓
+Information Retrieval
+
+🎯 Learning Outcomes
+
+After completing these notebooks, you should have a practical understanding of:
+
+How computers represent human language
+
+How text is converted into numerical features
+
+How TF-IDF works
+
+How N-Grams capture local word relationships
+
+How Word2Vec and GloVe represent semantic relationships
+
+How to calculate text similarity
+
+How to build basic text classification models
+
+How sentiment analysis works
+
+How topic modeling discovers hidden themes
+
+How information can be extracted from documents
+
+How search engines rank documents based on relevance
+
+💡 NLP Concepts Covered
+Text Representation
+
+Learn how raw text is transformed into numerical representations.
+
+Covered:
+
+BoW • TF-IDF • N-Grams
+
+Word Embeddings
+
+Learn how words can be represented as dense vectors containing semantic information.
+
+Covered:
+
+Word2Vec • GloVe
+
+Text Similarity
+
+Measure how similar two pieces of text are.
+
+Covered:
+
+Cosine Similarity • Word Mover's Distance
+
+Text Classification
+
+Build machine learning models for categorizing text.
+
+Covered:
+
+Naive Bayes • SVM • TF-IDF
+
+Sentiment Analysis
+
+Determine the emotional polarity of text.
+
+Covered:
+
+TextBlob • VADER
+
+Topic Modeling
+
+Discover hidden topics within a collection of documents.
+
+Covered:
+
+LDA • LSA • SVD
+
+Information Retrieval
+
+Build a simple search system that retrieves and ranks relevant documents.
+
+Covered:
+
+TF-IDF • Vector Similarity • Document Ranking
+
+🔮 Future Topics
+
+More advanced NLP topics can be added to this repository in the future:
 
 Named Entity Recognition (NER)
 
-Part-of-Speech (POS) tagging
+Part-of-Speech Tagging
 
-Text summarization
+Text Preprocessing Pipelines
 
-Text generation
+Text Summarization
 
-Sequence-to-sequence models
+Text Generation
 
-Recurrent Neural Networks (RNNs)
+RNNs
 
-LSTMs and GRUs
+LSTMs
 
-Transformer architectures
+GRUs
 
-BERT and other pretrained language models
+Transformers
+
+BERT
 
 Hugging Face Transformers
 
 Retrieval-Augmented Generation (RAG)
 
+Large Language Models (LLMs)
+
 🤝 Contributing
 
 Contributions are welcome!
 
-If you have improvements, additional notebooks, examples, or corrections, feel free to:
+If you would like to improve this repository:
 
 Fork the repository
 
 Create a new branch
 
-Add your improvements
+Add your notebook or improvements
 
 Commit your changes
 
-Open a Pull Request
+Create a Pull Request
+
+⭐ Support
+
+If you find this repository useful for learning NLP, consider giving it a ⭐ Star on GitHub.
+
+It helps others discover the project and motivates further development.
 
 📜 License
 
-This project is intended for educational and learning purposes. Add an appropriate open-source license such as MIT if you plan to distribute the repository publicly.
+This repository is intended for educational and learning purposes.
 
-⭐ If You Find This Useful
+You can add an open-source license such as the MIT License if you plan to distribute the project publicly.
 
-If this repository helps you learn NLP, consider giving it a ⭐ star and sharing it with others who are learning Natural Language Processing.
+👨‍💻 Author
 
-Happy Learning & Happy Coding! 🚀
+AYUSH KUMAR SINGH
+
+A hands-on collection of NLP concepts, implementations, and practical examples using Python.
+
+🚀 Happy Learning & Happy Coding!
