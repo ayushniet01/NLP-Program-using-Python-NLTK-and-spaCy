@@ -95,7 +95,7 @@ Advanced-NLP-Experiments/
 
 ## 👨‍💻 Author
 
-**Aditya Patel**
+**AYUSH KUMAR SINGH**
 
 ## 📄 License
 
